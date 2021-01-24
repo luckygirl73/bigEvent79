@@ -16,6 +16,9 @@ a {
   color: #333;
   text-decoration: none;
 }
+.layui-main {
+  margin-top: 20px;
+}
 .LoginAndRegi {
   width: 400px;
   height: 310px;

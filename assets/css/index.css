@@ -12,3 +12,25 @@ iframe {
 .layui-body {
   overflow: hidden;
 }
+/* 头部头像部分样式 */
+.text_avatar {
+  display: inline-block;
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #009688;
+}
+.layui-nav-img {
+  width: 40px;
+  height: 40px;
+}
+.userinfo {
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}

@@ -1,13 +1,13 @@
-function getUserinfo() {
+function getUserInfo() {
     axios.get('/my/userinfo').then(function (res) {
-        console.log(res)
+        // console.log(res)
         if (res.data.status !== 0) {
             return layer.msg('获取用户信息失败')
         }
         avatarAndName(res.data)
     })
 }
-getUserinfo()
+getUserInfo()
 function avatarAndName(res) {
     let name = res.data.nickname || res.data.username
     $('#welcome').text('欢迎' + name)
@@ -21,7 +21,7 @@ function avatarAndName(res) {
 }
 
 function exitPage () {
-    $('.layui-nav-item').on('click',function () {
+    $('#exitBtn').on('click',function () {
         layer.confirm('是否确认退出', {icon: 3, title:'提示'}, function(index){
             //do something
             location.href = '/home/login.html'

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+      if (!localStorage.getItem("token")) {
+        location.href = "/home/login.html";
+      }
+    </script>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="/assets/fonts/iconfont.css">
     <link rel="stylesheet" href="/assets/css/index.css">   
@@ -30,7 +35,7 @@
               <dd><a href="javascript:;">重置密码</a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item"><a href="javascript:;">退出</a></li>
+          <li class="layui-nav-item" id="exitBtn"><a href="javascript:;">退出</a></li>
         </ul>
       </div>
       
@@ -60,9 +65,9 @@
             <li class="layui-nav-item">
               <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
               <dl class="layui-nav-child">
-                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                <dd><a href="/user/user_info.html" target="box"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
                 <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                <dd><a href="/user/user_pwd.html" target="box"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
               </dl>
             </li>
            
@@ -72,7 +77,8 @@
       
       <div class="layui-body">
         <!-- 内容主体区域 -->
-        <iframe name="box" src="/home/dashboard.html" frameborder="0"></iframe>
+        <!-- <iframe name="box" src="/home/dashboard.html" frameborder="0"></iframe> -->
+        <iframe name="box" src="/user/user_pwd.html" frameborder="0"></iframe>
       </div>
       
       <div class="layui-footer">

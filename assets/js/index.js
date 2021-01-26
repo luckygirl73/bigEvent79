@@ -1,5 +1,5 @@
 function getUserInfo() {
-    axios.get('/my/userinfo').then(function (res) {
+    axios.get('/my/userinfo',{}).then(function (res) {
         // console.log(res)
         if (res.data.status !== 0) {
             return layer.msg('获取用户信息失败')
@@ -10,7 +10,7 @@ function getUserInfo() {
 getUserInfo()
 function avatarAndName(res) {
     let name = res.data.nickname || res.data.username
-    $('#welcome').text('欢迎' + name)
+    $('#welcome').text('欢迎 ' + name)
     if (res.data.user_pic) {
         $('.layui-nav-img').attr('src', res.data.user_pic).show()
         $('.text_avatar').hide()

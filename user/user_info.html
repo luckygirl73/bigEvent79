@@ -12,6 +12,13 @@
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
             <form class="layui-form" id="form" action="" lay-filter='form'>
+              <!-- 请求时需要的数据中有id，故添加但是隐藏 -->
+                <div class="layui-form-item layui-hide">
+                  <label class="layui-form-label">登录用户的id</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="id" required  lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input">
+                  </div>
+                </div>
                 <div class="layui-form-item">
                   <label class="layui-form-label">登录名称</label>
                   <div class="layui-input-block">
